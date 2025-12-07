@@ -1,17 +1,6 @@
 const file = Deno.readTextFileSync('src/day4/input4.txt');
 const input = file.split('\n');
 
-const input2 = `..@@.@@@@.
-@@@.@.@.@@
-@@@@@.@.@@
-@.@@@@..@.
-@@.@@@@.@@
-.@@@@@@@.@
-.@.@.@.@@@
-@.@@@.@@@@
-.@@@@@@@@.
-@.@.@@@.@.`.split('\n');
-
 const ROLL = '@';
 
 function getAdjacentRolls(arr: string[][], i: number, j: number): number {

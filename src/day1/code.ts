@@ -1,10 +1,6 @@
-const file = Deno.readTextFileSync('src/day1/input1.txt');
-const input = file.split('\n') as Action[];
 
-type Direction = 'L' | 'R';
-type Action = `${Direction}${number}`;
-
-const initialPosition = 50;
+export type Direction = 'L' | 'R';
+export type Action = `${Direction}${number}`;
 
 function parseAction(action: Action): number {
   const direction = action.charAt(0) as Direction;
@@ -13,7 +9,8 @@ function parseAction(action: Action): number {
   return direction === 'L' ? -distance : distance;
 }
 
-function countZeros(initialPosition: number, actions: Action[]): number {
+export function solveA(actions: Action[]): number {
+  let initialPosition = 50;
   let zeros = 0;
   actions.forEach((action) => {
     initialPosition += parseAction(action);
@@ -33,7 +30,8 @@ function countZeros(initialPosition: number, actions: Action[]): number {
   return zeros;
 }
 
-function countZeroPasses(initialPosition: number, actions: Action[]): number {
+export function solveB(actions: Action[]): number {
+  let initialPosition = 50;
   let zeros = 0;
   actions.forEach((action) => {
     const numAction = parseAction(action);
@@ -49,9 +47,3 @@ function countZeroPasses(initialPosition: number, actions: Action[]): number {
 
   return zeros;
 }
-
-const day1Part1 = countZeros(initialPosition, input);
-const day1Part2 = countZeroPasses(initialPosition, input);
-
-console.log('1A: ', day1Part1);
-console.log('1B: ', day1Part2);

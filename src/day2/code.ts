@@ -1,7 +1,4 @@
-const file = Deno.readTextFileSync('src/day2/input2.txt');
-const input = file.split(',').map((report) => report.split('-')) as IdRange[];
-
-type IdRange = [from: string, to: string];
+export type IdRange = [from: string, to: string];
 
 function isInvalidIdHalf(id: string): boolean {
   if (id.length % 2 !== 0) {
@@ -11,7 +8,7 @@ function isInvalidIdHalf(id: string): boolean {
   return id.substring(0, id.length / 2) === id.substring(id.length / 2);
 }
 
-function sumInvalidIdsHalf(ids: IdRange[]): number {
+export function solveA(ids: IdRange[]): number {
   let sum = 0;
   ids.forEach(([from, to]) => {
     const fromNum = parseInt(from, 10);
@@ -41,7 +38,7 @@ function isInvalidId(id: string): boolean {
   return false;
 }
 
-function sumInvalidIds(ids: IdRange[]): number {
+export function solveB(ids: IdRange[]): number {
   let sum = 0;
   ids.forEach(([from, to]) => {
     const fromNum = parseInt(from, 10);
@@ -58,9 +55,3 @@ function sumInvalidIds(ids: IdRange[]): number {
   });
   return sum;
 }
-
-const result2A = sumInvalidIdsHalf(input);
-const result2B = sumInvalidIds(input);
-
-console.log('2A: ', result2A);
-console.log('2B: ', result2B);

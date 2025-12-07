@@ -1,5 +1,3 @@
-const file = Deno.readTextFileSync('src/day5/input5.txt');
-const input = file.split('\n');
 
 function getIngredientsAndRanges(input: string[]) {
   const res = {
@@ -17,7 +15,7 @@ function getIngredientsAndRanges(input: string[]) {
   return res;
 }
 
-function solve5A(input: string[]): number {
+export function solveA(input: string[]): number {
   const {ingredients, ranges} = getIngredientsAndRanges(input);
   const freshIngredients = ingredients.filter(ingredient => {
     return ranges.some(([min,max]) => {
@@ -27,7 +25,7 @@ function solve5A(input: string[]): number {
   return freshIngredients.length;
 }
 
-function solve5B(input: string[]) {
+export function solveB(input: string[]) {
   const {ranges} = getIngredientsAndRanges(input);
 
   // Using a Set is not an option as it overflows
@@ -53,6 +51,3 @@ function solve5B(input: string[]) {
 
   return total;
 }
-
-console.log('5A: ', solve5A(input));
-console.log('5B: ', solve5B(input));

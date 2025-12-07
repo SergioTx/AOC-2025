@@ -1,6 +1,3 @@
-const file = Deno.readTextFileSync('src/day4/input4.txt');
-const input = file.split('\n');
-
 const ROLL = '@';
 
 function getAdjacentRolls(arr: string[][], i: number, j: number): number {
@@ -16,7 +13,7 @@ function getAdjacentRolls(arr: string[][], i: number, j: number): number {
   ].filter((pos) => pos === ROLL).length;
 }
 
-function solve4A(input: string[]): number {
+export function solveA(input: string[]): number {
   let result = 0;
   const arr = input.map((line) => line.split(''));
   for (let i = 0; i < arr.length; i++) {
@@ -34,7 +31,7 @@ function solve4A(input: string[]): number {
   return result;
 }
 
-function solve4B(input: string[]): number {
+export function solveB(input: string[]): number {
   const arr = input.map((line) => line.split(''));
   let total = 0;
   let result = 0;
@@ -58,9 +55,3 @@ function solve4B(input: string[]): number {
 
   return total;
 }
-
-const result4A = solve4A(input);
-const result4B = solve4B(input);
-
-console.log('4A: ', result4A);
-console.log('4B: ', result4B);

@@ -17,5 +17,5 @@ Deno.test(day + 'A', () => {
 
 Deno.test(day + 'B', () => {
   const result = solveB(input);
-  expect(result).toBe(-11);
+  expect(result).toBe(3263827);
 });

@@ -1,7 +1,9 @@
 import { solveB, solveA, type IdRange } from "./code";
 
-const file = Deno.readTextFileSync('src/day2/input.txt');
+const file = Deno.readTextFileSync(import.meta.dirname + '/input.txt');
 const input = file.split(',').map((report: string) => report.split('-')) as IdRange[];
 
-console.log('2A: ', solveA(input));
-console.log('2B: ', solveB(input));
+const day = import.meta.dirname.match(/day(\d+)$/).at(1);
+
+console.log(`${day}A: ${solveA(input)}`);
+console.log(`${day}B: ${solveB(input)}`);

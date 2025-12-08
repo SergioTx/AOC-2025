@@ -14,12 +14,14 @@ const input = `..@@.@@@@.
 .@@@@@@@@.
 @.@.@@@.@.`.split('\n');
 
-Deno.test('4A', () => {
+const day = import.meta.dirname?.match(/day(\d+)$/)?.at(1) ?? '-';
+
+Deno.test(day + 'A', () => {
   const result = solveA(input);
   expect(result).toBe(13);
 });
 
-Deno.test('4B', () => {
+Deno.test(day + 'B', () => {
   const result = solveB(input);
   expect(result).toBe(43);
 });

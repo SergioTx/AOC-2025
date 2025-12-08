@@ -3,7 +3,7 @@ import './src/day2/index.ts';
 import './src/day3/index.ts';
 import './src/day4/index.ts';
 import './src/day5/index.ts';
-// import './src/day6/index.ts';
+import './src/day6/index.ts';
 // import './src/day7/index.ts';
 // import './src/day8/index.ts';
 // import './src/day9/index.ts';

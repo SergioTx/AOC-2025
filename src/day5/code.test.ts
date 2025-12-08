@@ -15,12 +15,14 @@ const input = `3-5
 17
 32`.split('\n');
 
-Deno.test('5A', () => {
+const day = import.meta.dirname?.match(/day(\d+)$/)?.at(1) ?? '-';
+
+Deno.test(day + 'A', () => {
   const result = solveA(input);
   expect(result).toBe(3);
 });
 
-Deno.test('5B', () => {
+Deno.test(day + 'B', () => {
   const result = solveB(input);
   expect(result).toBe(14n);
 });

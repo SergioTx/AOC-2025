@@ -14,12 +14,14 @@ L99
 R14
 L82`.split('\n') as Action[];
 
-Deno.test('1A', () => {
+const day = import.meta.dirname?.match(/day(\d+)$/)?.at(1) ?? '-';
+
+Deno.test(day + 'A', () => {
   const result = solveA(input);
   expect(result).toBe(3);
 });
 
-Deno.test('1B', () => {
+Deno.test(day + 'B', () => {
   const result = solveB(input);
   expect(result).toBe(6);
 });

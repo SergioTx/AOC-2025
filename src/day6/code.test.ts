@@ -3,19 +3,19 @@
 import { expect } from 'jsr:@std/expect';
 import { solveA, solveB } from './code';
 
-const input = `987654321111111
-811111111111119
-234234234234278
-818181911112111`.split('\n');
+const input = `123 328  51 64 
+ 45 64  387 23 
+  6 98  215 314
+*   +   *   +  `.split('\n');
 
 const day = import.meta.dirname?.match(/day(\d+)$/)?.at(1) ?? '-';
 
 Deno.test(day + 'A', () => {
   const result = solveA(input);
-  expect(result).toBe(357);
+  expect(result).toBe(4277556);
 });
 
 Deno.test(day + 'B', () => {
   const result = solveB(input);
-  expect(result).toBe(3121910778619);
+  expect(result).toBe(-11);
 });

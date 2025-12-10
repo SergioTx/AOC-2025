@@ -1,7 +1,7 @@
 /// <reference lib="deno.ns" />
 
-import { expect } from 'jsr:@std/expect';
-import { solveA, solveB } from './code';
+import { expect } from '@std/expect';
+import { solveA, solveB } from './code.ts';
 
 const input = `987654321111111
 811111111111119

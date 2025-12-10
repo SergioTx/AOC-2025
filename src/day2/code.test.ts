@@ -1,11 +1,13 @@
 /// <reference lib="deno.ns" />
 
-import { expect } from 'jsr:@std/expect';
-import { solveA, solveB, type IdRange } from './code';
+import { expect } from '@std/expect';
+import { solveA, solveB, type IdRange } from './code.ts';
 
 const input = `11-22,95-115,998-1012,1188511880-1188511890,222220-222224,
 1698522-1698528,446443-446449,38593856-38593862,565653-565659,
-824824821-824824827,2121212118-2121212124`.split(',').map((report: string) => report.split('-')) as IdRange[];
+824824821-824824827,2121212118-2121212124`
+  .split(',')
+  .map((report: string) => report.split('-')) as IdRange[];
 
 const day = import.meta.dirname?.match(/day(\d+)$/)?.at(1) ?? '-';
 

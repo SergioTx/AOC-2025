@@ -1,7 +1,7 @@
 /// <reference lib="deno.ns" />
 
-import { expect } from 'jsr:@std/expect';
-import { solveA, solveB, type Action } from './code';
+import { expect } from '@std/expect';
+import { solveA, solveB, type Action } from './code.ts';
 
 const input = `L68
 L30

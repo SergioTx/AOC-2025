@@ -1,10 +1,10 @@
 /// <reference lib="deno.ns" />
 
-import { expect } from 'jsr:@std/expect';
-import { solveA, solveB } from './code';
+import { expect } from '@std/expect';
+import { solveA, solveB } from './code.ts';
 
-const input = `123 328  51 64 
- 45 64  387 23 
+const input = `123 328  51 64
+ 45 64  387 23
   6 98  215 314
 *   +   *   +  `.split('\n');
 

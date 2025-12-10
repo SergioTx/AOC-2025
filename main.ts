@@ -1,10 +1,12 @@
+console.time('AOC 2025 Total Time');
+
 import './src/day1/index.ts';
 import './src/day2/index.ts';
 import './src/day3/index.ts';
 import './src/day4/index.ts';
 import './src/day5/index.ts';
 import './src/day6/index.ts';
-// import './src/day7/index.ts';
+import './src/day7/index.ts';
 // import './src/day8/index.ts';
 // import './src/day9/index.ts';
 
@@ -25,3 +27,4 @@ import './src/day6/index.ts';
 // import './src/day23/index.ts';
 // import './src/day24/index.ts';
 // import './src/day25/index.ts';
+console.timeEnd('AOC 2025 Total Time');

@@ -5,5 +5,5 @@ function importFn(day: `day${number}`) {
 }
 
 for (let i = 1; i <= 12; i++) {
-  importFn(`day${i}`);
+  await importFn(`day${i}`);
 }

@@ -3,23 +3,18 @@
 import { expect } from '@std/expect';
 import { solveA, solveB } from './code.ts';
 
-const input = `7,1
-11,1
-11,7
-9,7
-9,5
-2,5
-2,3
-7,3`.split('\n');
+const input = `[.##.] (3) (1,3) (2) (2,3) (0,2) (0,1) {3,5,4,7}
+[...#.] (0,2,3,4) (2,3) (0,4) (0,1,2) (1,2,3,4) {7,5,12,7,2}
+[.###.#] (0,1,2,3,4) (0,3,4) (0,1,2,4,5) (1,2) {10,11,11,5,10,5}`.split('\n');
 
 const day = import.meta.dirname?.match(/day(\d+)$/)?.at(1) ?? '-';
 
 Deno.test(day + 'A', () => {
   const result = solveA(input);
-  expect(result).toBe(50);
+  expect(result).toBe(7);
 });
 
 Deno.test.ignore(day + 'B', () => {
   const result = solveB(input);
-  expect(result).toBe(24);
+  expect(result).toBe(33);
 });

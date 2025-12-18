@@ -4,9 +4,11 @@ function importFn(day: `day${number}`) {
     // do nothing
   });
 }
+
+const customArgs = Deno.args.filter((arg) => !arg.startsWith('--'));
 console.log('Starting AOC 2025 solutions...');
-if (Deno.args.length >= 1) {
-  Deno.args.forEach(async (dayArg) => {
+if (customArgs.length >= 1) {
+  customArgs.forEach(async (dayArg) => {
     const day = `day${parseInt(dayArg, 10)}` as const;
     console.log(`Running ${day}...`);
     await importFn(day);

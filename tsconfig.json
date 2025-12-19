@@ -16,7 +16,7 @@
     "verbatimModuleSyntax": true,
     "noImplicitOverride": true,
     "baseUrl": "src",
-    "lib": ["dom", "dom.iterable", "esnext"]
+    "lib": ["dom", "esnext"]
   },
   "include": ["src"]
 }

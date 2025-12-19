@@ -11,7 +11,7 @@ if (
   Deno.args.some((arg) => arg === day) ||
   Deno.args.some((arg) => arg.toUpperCase() === `${day}A`)
 ) {
-  console.log(`${day}A: COMMENTED ${solveA(input, 1_000)}`);
+  console.log(`${day}A: ${solveA(input, 1_000)}`);
 }
 
 if (
@@ -19,5 +19,5 @@ if (
   Deno.args.some((arg) => arg === day) ||
   Deno.args.some((arg) => arg.toUpperCase() === `${day}B`)
 ) {
-  console.log(`${day}B: COMMENTED ${solveB(input)}`);
+  console.log(`${day}B: ${solveB(input)}`);
 }
